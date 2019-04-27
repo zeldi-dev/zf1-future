@@ -1075,7 +1075,7 @@ class Zend_SessionTest extends PHPUnit_Framework_TestCase
     public function testInvalidPreexistingSessionIdDoesNotPreventRegenerationOfSid()
     {
         // Pattern: [0-9a-v]*
-        ini_set('session.hash_bits_per_character', 5);
+        ini_set('session.sid_bits_per_character', 5);
 
         // Session store
         $sessionCharSet = array_merge(range(0,9), range('a','v'));
