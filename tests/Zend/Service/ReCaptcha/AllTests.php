@@ -26,7 +26,6 @@ if (!defined('PHPUnit_MAIN_METHOD')) {
 
 require_once 'Zend/Service/ReCaptcha/ReCaptchaTest.php';
 require_once 'Zend/Service/ReCaptcha/ResponseTest.php';
-require_once 'Zend/Service/ReCaptcha/MailHideTest.php';
 
 /**
  * @category   Zend
