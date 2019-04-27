@@ -1271,14 +1271,6 @@ class Zend_Http_Client
         if (isset($this->raw_post_data) && is_resource($this->raw_post_data)) {
             return $this->raw_post_data;
         }
-        // If mbstring overloads substr and strlen functions, we have to
-        // override it's internal encoding
-        if (function_exists('mb_internal_encoding') &&
-           ((int) ini_get('mbstring.func_overload')) & 2) {
-
-            $mbIntEnc = mb_internal_encoding();
-            mb_internal_encoding('ASCII');
-        }
 
         // If we have raw_post_data set, just use it as the body.
         if (isset($this->raw_post_data)) {
