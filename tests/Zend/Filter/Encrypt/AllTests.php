@@ -24,7 +24,6 @@ if (!defined('PHPUnit_MAIN_METHOD')) {
     define('PHPUnit_MAIN_METHOD', 'Zend_Filter_Encrypt_AllTests::main');
 }
 
-require_once 'Zend/Filter/Encrypt/McryptTest.php';
 require_once 'Zend/Filter/Encrypt/OpensslTest.php';
 
 /**
