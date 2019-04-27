@@ -991,7 +991,7 @@ class Zend_Ldap
             throw new Zend_Ldap_Exception($this, 'searching: ' . $filter);
         }
         if ($sort !== null && is_string($sort)) {
-            $isSorted = @ldap_sort($this->getResource(), $search, $sort);
+            $isSorted = false;
             if($isSorted === false) {
                 /**
                  * @see Zend_Ldap_Exception
