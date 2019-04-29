@@ -437,7 +437,9 @@ abstract class Zend_Db_Table_Rowset_Abstract implements SeekableIterator, Counta
                     }
                 }
             } else {
-                $this->_rows[$position]->setTable(null);
+                if(method_exists($this->_rows[$position], 'setTable')){
+                    $this->_rows[$position]->setTable(null);
+                }
             }
         }
 
