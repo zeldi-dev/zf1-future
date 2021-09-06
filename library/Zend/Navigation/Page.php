@@ -255,8 +255,11 @@ abstract class Zend_Navigation_Page extends Zend_Navigation_Container
 
         $hasUri = isset($options['uri']);
         $hasMvc = isset($options['action']) || isset($options['controller']) ||
-                  isset($options['module']) || isset($options['route']) ||
-                  isset($options['params']);
+            isset($options['module']) || isset($options['route']);
+
+//        $hasMvc = isset($options['action']) || isset($options['controller']) ||
+//                  isset($options['module']) || isset($options['route']) ||
+//                  isset($options['params']); // ZF-10 TRIS compatibility issue
 
         if ($hasMvc) {
             require_once 'Zend/Navigation/Page/Mvc.php';
