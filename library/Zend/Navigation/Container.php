@@ -305,6 +305,12 @@ abstract class Zend_Navigation_Container implements RecursiveIterator, Countable
             
             // Rel and rev
             if (is_array($pageProperty)) {
+                // FIX za tris navigation menu
+                if ($pageProperty === $value) {
+                    return $page;
+                }
+                // END of fix
+
                 foreach ($pageProperty as $item) {
                     if (is_array($item)) {
                         // Use regex?
