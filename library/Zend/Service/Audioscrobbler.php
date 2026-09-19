@@ -648,7 +648,7 @@ class Zend_Service_Audioscrobbler
      * @param  array   $errcontext
      * @return void
      */
-    public function _errorHandler($errno, $errstr, $errfile, $errline, array $errcontext)
+    public function _errorHandler($errno, $errstr, $errfile = null, $errline = null, array $errcontext = array())
     {
         $this->_error = array(
             'errno'      => $errno,
